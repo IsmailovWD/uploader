@@ -32,6 +32,9 @@ app.post('/upload', upload, (req, res) => {
 });
 app.use('/open', express.static('uploads'))
 
+app.get('/', (req,res) => {
+  res.send('Uploader is working')
+})
 
 // Serverni ishga tushirish
 app.listen(port, () => {
