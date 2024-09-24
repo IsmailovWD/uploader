@@ -43,6 +43,9 @@ app.post('/upload', upload, (req, res) => {
   });
 });
 
+app.get('/', (req,res) => {
+  res.send('Uploader is working')
+})
 // Statik fayllarga kirish
 app.use('/open', express.static('uploads'));
 
